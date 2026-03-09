@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banti — AI Agents for Ecommerce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #111;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .nav-logo {
+      font-size: 1.35rem; font-weight: 700; color: #111;
+      text-decoration: none; letter-spacing: -0.03em;
+    }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-link {
+      color: #444; text-decoration: none; font-size: 0.875rem;
+      font-weight: 400; padding: 8px 14px; border-radius: 6px;
+      transition: background 0.15s;
+    }
+    .nav-link:hover { background: #f5f5f5; }
+    .nav-btn {
+      padding: 9px 20px; background: #111; color: #fff;
+      border: none; border-radius: 8px; font-size: 0.875rem;
+      font-weight: 500; cursor: pointer; text-decoration: none;
+      font-family: inherit; transition: background 0.15s;
+    }
+    .nav-btn:hover { background: #333; }
+
+    /* HERO */
+    .hero {
+      display: flex; flex-direction: column; align-items: flex-start;
+      padding: 100px 48px 80px;
+      max-width: 680px;
+    }
+    h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #111;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 36px;
+      font-weight: 400;
+      max-width: 460px;
+    }
+    .input-group {
+      display: flex; gap: 10px; width: 100%; max-width: 480px; margin-bottom: 12px;
+    }
+    .email-input {
+      flex: 1; padding: 14px 18px;
+      border: 1px solid #d5d5d5; border-radius: 8px;
+      font-size: 0.9rem; font-family: inherit; color: #111;
+      outline: none; transition: border-color 0.2s;
+      background: #fff;
+    }
+    .email-input:focus { border-color: #999; }
+    .email-input::placeholder { color: #aaa; }
+    .start-btn {
+      padding: 14px 24px; background: #111; color: #fff;
+      border: none; border-radius: 8px; font-size: 0.9rem;
+      font-weight: 600; cursor: pointer; white-space: nowrap;
+      font-family: inherit; transition: background 0.15s, transform 0.1s;
+    }
+    .start-btn:hover { background: #333; transform: translateY(-1px); }
+    .disclaimer {
+      font-size: 0.775rem; color: #aaa;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none; border-top: 1px solid #ebebeb;
+      margin: 60px 48px 52px;
+    }
+
+    /* LOGOS */
+    .logos-section { padding: 0 0 100px; overflow: hidden; }
+    .logos-label {
+      text-align: left; font-size: 0.82rem; color: #999;
+      margin-bottom: 28px; padding: 0 48px;
+      font-weight: 400;
+    }
+    .logos-track-wrapper {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .logos-track {
+      display: flex; align-items: center;
+      gap: 56px;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+    .logos-track:hover { animation-play-state: paused; }
+    .logo-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #bbb;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      text-transform: uppercase;
+      user-select: none;
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .logo-name:hover { color: #777; }
+
+    @keyframes scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 24px; }
+      .hero { padding: 64px 24px 56px; }
+      .input-group { flex-direction: column; }
+      .divider { margin: 48px 24px 40px; }
+      .logos-label { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Banti</a>
+  <div class="nav-right">
+    <a href="#" class="nav-link">Log in</a>
+    <a href="https://calendly.com/sachinsrikanth0101/30min" class="nav-btn">Book Demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Put your ecommerce<br/>operations on autopilot</h1>
+  <p class="hero-sub">
+    Banti is the all-in-one AI platform to monitor, manage, and grow your ecommerce business.
+    Start free, then see results on day one.
+  </p>
+  <div class="input-group">
+    <input class="email-input" type="email" placeholder="Enter your email address" />
+    <button class="start-btn">Start free trial</button>
+  </div>
+  <p class="disclaimer">You agree to receive Banti product updates and emails.</p>
+</div>
+
+<hr class="divider" />
+
+<!-- LOGO CAROUSEL -->
+<div class="logos-section">
+  <p class="logos-label">Powering operations at leading brands</p>
+  <div class="logos-track-wrapper">
+    <div class="logos-track">
+      <span class="logo-name">Gymshark</span>
+      <span class="logo-name">Allbirds</span>
+      <span class="logo-name">Kylie Cosmetics</span>
+      <span class="logo-name">Brooklinen</span>
+      <span class="logo-name">Death Wish Coffee</span>
+      <span class="logo-name">UNTUCKit</span>
+      <span class="logo-name">Skims</span>
+      <span class="logo-name">Vuori</span>
+      <span class="logo-name">Caraway</span>
+      <span class="logo-name">Mejuri</span>
+      <span class="logo-name">Ridge Wallet</span>
+      <span class="logo-name">True Classic</span>
+      <span class="logo-name">Gymshark</span>
+      <span class="logo-name">Allbirds</span>
+      <span class="logo-name">Kylie Cosmetics</span>
+      <span class="logo-name">Brooklinen</span>
+      <span class="logo-name">Death Wish Coffee</span>
+      <span class="logo-name">UNTUCKit</span>
+      <span class="logo-name">Skims</span>
+      <span class="logo-name">Vuori</span>
+      <span class="logo-name">Caraway</span>
+      <span class="logo-name">Mejuri</span>
+      <span class="logo-name">Ridge Wallet</span>
+      <span class="logo-name">True Classic</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
